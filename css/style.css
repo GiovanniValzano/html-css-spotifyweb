@@ -12,7 +12,7 @@ body {
     right: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.423);
-    width: calc(100vw - 280px);
+    width: calc(100vw - 240px);
     height: 50px;
 }
 
@@ -20,13 +20,20 @@ main {
     overflow-y: auto;
     background-color: rgba(20, 25, 34, 1);
     height: calc(100vh - 80px);
-    width: calc(100vw - 280px);
+    width: calc(100vw - 240px);
 }
 
 .navbarleft {
     background-color: black;
     height: calc(100vh - 80px);
-    width: 280px;
+    width: 240px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .navbarbottom {
@@ -156,6 +163,156 @@ main {
     background: none;
     color: white;
     font-size: 16px;
+}
+
+.linecont {
+    position: relative;
+}
+
+.secondline {
+    position: absolute;
+    top: 0;
+    background-color: rgb(205, 205, 205);
+    width: 10vw;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.linepoint {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: 10vw;
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.upgrade {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upgrade a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 7px 20px 7px 20px ;
+    margin-right: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.logo {
+    width: 140px;
+    padding-left: 8px;
+}
+
+.smalllogo {
+    display: none;
+}
+
+.sidevoices {
+    color: rgba(135, 135, 135, 1);
+    list-style: none;
+    padding-left: 0px;
+}
+
+.sidevoices li {
+    border-left: 3px solid black;
+    margin-bottom: 2px;
+    padding-left: 8px;
+}
+
+.sidevoices span {
+    vertical-align: super;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sidevoices img {
+    width: 30px;
+}
+
+.sideplaylist h2 {
+    color: white;
+    padding-left: 11px;
+    font-size: 15px;
+}
+
+.createplaylist {
+    color: rgba(135, 135, 135, 1);
+    margin-left: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.createplaylist h3 {
+    font-size: 14px;
+    margin-left: 11px;
+}
+
+.plus {
+    background-color: rgba(135, 135, 135, 1);
+    color: black;
+    font-size: 18px;
+    padding: 7px;
+    aspect-ratio: 1;
+}
+
+.plus i {
+    display: block;
+}
+
+.listplaylist {
+    padding-left: 0px;
+}
+
+.listplaylist li {
+    list-style: none;
+    padding-left: 11px;
+    color: rgba(135, 135, 135, 1);
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.install {
+    color: rgba(135, 135, 135, 1);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding-left: 7px;
+    border-bottom: 1px solid rgba(135, 135, 135, 1);
+    padding-bottom: 6px;
+}
+
+.install img {
+    display: block;
+    width: 18px;
+}
+
+.profile {
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-left: 7px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-weight: 600;
+}
+
+.profile img {
+    display: block;
+    width: 18px;
+    background-color: rgba(135, 135, 135, 1);
+    clip-path: circle();
+    padding: 1px;
 }
 
 /* Phone layout */
