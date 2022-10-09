@@ -21,6 +21,10 @@ main {
     background-color: rgba(20, 25, 34, 1);
     height: calc(100vh - 80px);
     width: calc(100vw - 240px);
+    padding-top: 65px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbarleft {
@@ -212,6 +216,8 @@ main {
 
 .smalllogo {
     display: none;
+    padding-left: 8px;
+    width: 33px;
 }
 
 .sidevoices {
@@ -315,6 +321,79 @@ main {
     padding: 1px;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+nav .navlink {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(135, 135, 135, 1);
+    display: block;
+
+}
+
+main h2 {
+    color: white;
+}
+
+main h4 {
+    font-size: 13px;
+    margin-top: -16px;
+    color: rgba(135, 135, 135, 1);
+}
+
+.cards {
+   width: 180px;
+}
+
+.cards img {
+    width: 100%;
+    display: block;
+}
+
+.recentlycont {
+    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardcont {
+    text-align: center;
+}
+
+.cardcont h3 {
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.cardcont .subtitle {
+    color: rgba(135, 135, 135, 1);
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.creatocont {
+    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artistcont {
+    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artistimg {
+    clip-path: circle();
+}
+
 /* Phone layout */
 
 @media screen and (max-width : 552px) {
@@ -370,4 +449,40 @@ main {
     .timeline .time {
         font-size: 7px;
     }
+
+    .smalllogo {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .sidevoices span {
+        display: none;
+    }
+
+    .sideplaylist {
+        display: none;
+    }
+
+    .sidebarbottom span {
+        display: none;
+    }
+
+    .install {
+        border: none;
+    }
+
+    .sidebarbottom img {
+        width: 22px;
+    }
+}
+
+@media screen and (max-width : 654px) {
+
+    .cards {
+        width: calc((100% - 20px) / 2);
+    }
+
 }
