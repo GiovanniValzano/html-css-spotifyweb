@@ -38,6 +38,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
 }
 
 .navbarbottom {
@@ -97,6 +98,7 @@ main {
     padding: 0;
     font-size: 16px;
     color: rgba(135, 135, 135, 1);
+    transition: .2s;
 }
 
 .navbarbottomsecond {
@@ -167,10 +169,12 @@ main {
     background: none;
     color: white;
     font-size: 16px;
+    transition: .2s;
 }
 
 .linecont {
     position: relative;
+    transition: .2s;
 }
 
 .secondline {
@@ -180,6 +184,7 @@ main {
     width: 10vw;
     height: 4px;
     border-radius: 2px;
+    transition: .2s;
 }
 
 .linepoint {
@@ -191,6 +196,7 @@ main {
     height: 8px;
     width: 8px;
     border-radius: 50%;
+    transition: .2s;
 }
 
 .upgrade {
@@ -207,6 +213,7 @@ main {
     margin-right: 20px;
     border-radius: 20px;
     font-size: 12px;
+    transition: .2s;
 }
 
 .logo {
@@ -230,12 +237,14 @@ main {
     border-left: 3px solid black;
     margin-bottom: 2px;
     padding-left: 8px;
+    transition: .2s;
 }
 
 .sidevoices span {
     vertical-align: super;
     font-size: 15px;
     font-weight: 600;
+    transition: .2s;
 }
 
 .sidevoices img {
@@ -258,6 +267,7 @@ main {
 .createplaylist h3 {
     font-size: 14px;
     margin-left: 11px;
+    transition: .2s;
 }
 
 .plus {
@@ -266,6 +276,7 @@ main {
     font-size: 18px;
     padding: 7px;
     aspect-ratio: 1;
+    transition: .2s;
 }
 
 .plus i {
@@ -283,6 +294,7 @@ main {
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: 600;
+    transition: .2s;
 }
 
 .install {
@@ -334,7 +346,7 @@ nav .navlink {
     font-size: 14px;
     color: rgba(135, 135, 135, 1);
     display: block;
-
+    transition: .2s;
 }
 
 main h2 {
@@ -399,19 +411,16 @@ main h4 {
 @media screen and (max-width : 552px) {
     
     .upgrade {
-        width: calc(100vw - 60px);
+        width: calc(100vw - 50px);
     }
 
     .navbarleft {
-        width: 60px;
+        width: 50px;
+        padding-left: 0px;
     }
 
     main {
-        width: calc(100vw - 60px);
-    }
-
-    .navbottomicons {
-        flex-direction: column;
+        width: calc(100vw - 50px);
     }
 
     .navbarbottomfirst .navbarbottomimg {
@@ -474,8 +483,12 @@ main h4 {
         border: none;
     }
 
-    .sidebarbottom img {
-        width: 22px;
+    .sidebarbottom .install,.profile {
+        width: 27px;
+    }
+
+    .sidebarbottom {
+        padding-left: 8px;
     }
 }
 
@@ -485,4 +498,98 @@ main h4 {
         width: calc((100% - 20px) / 2);
     }
 
+    .navbottomicons {
+        flex-direction: column;
+    }
+
+}
+
+/* Hover effect */
+
+.upgrade a:hover {
+    background-color: rgba(135, 135, 135, 1);
+    color: black;
+    border-color: rgba(135, 135, 135, 1);
+}
+
+.createplaylist:hover .plus {
+    background-color: white;
+}
+
+.createplaylist:hover {
+    cursor: pointer;
+}
+
+.createplaylist:hover  h3 {
+    color: white;
+}
+
+.sidevoices li:hover span {
+    color: white;
+}
+
+.sidevoices li:hover {
+    cursor: pointer;
+    border-left-color: rgba(173, 255, 47, 1);
+}
+
+.listplaylist li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.timeline:hover .secondline {
+    background-color: rgba(173, 255, 47, 1);
+}
+
+.timeline:hover {
+    cursor: pointer;
+}
+
+.timeline:hover .linepoint{
+    display: block;
+}
+
+.navbarbottomfirst .navbottomicons button:hover {
+    color: rgba(173, 255, 47, 1);
+    cursor: pointer;
+}
+
+.playerbtnscont button:hover {
+    transform: scale(120%);
+    cursor: pointer;
+}
+
+.navbarbottomthird button:hover {
+    color: rgba(173, 255, 47, 1);
+    cursor: pointer;
+}
+
+.cardimg {
+    position: relative;
+}
+
+.playappear {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    top: 39%;
+    left: 41%;
+    display: none;
+}
+
+.cards:hover {
+    cursor: pointer;
+}
+
+.cards .cardimg:hover img {
+    opacity: 0.4;
+}
+
+.cards .cardimg:hover .playappear {
+    display: block;
+}
+
+.navlink:hover {
+    color: white;
 }
